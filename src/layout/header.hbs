@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>{{title}}</title>
+    <meta charset='utf-8' />
+    <link rel='stylesheet' href='css/index.css' />
+</head>
+
+<body>
+
+    <header>
+        <h1>{{title}}</h1>
+        {{> title texth2=h2text}}
+        {{> title texth2="Жорстке/явне значення компонента"}}
+        {{!-- <h2>Welcome</h2> --}}
+    </header>
+
+    {{> line}}
+    {{> space}}
+
+    <main>
+        {{! body - Сюди вставляється контейнер з user-list.hbs: }}
+        {{{body}}}
+    </main>
+
+</body>
+
+</html>

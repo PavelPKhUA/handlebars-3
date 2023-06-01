@@ -1,0 +1,32 @@
+<div>
+
+    {{#with data}}
+
+        <div>ID: {{id}}</div>
+        <div>Name: {{name}}</div>
+        <div>
+            {{#if isAdmin}}
+                {{> button text="Send report"}}
+                {{!-- <button>Send report</button> --}}
+            {{else}}
+                {{> button text="Send message"}}
+                {{!-- <button>Send message</button> --}}
+            {{/if}}
+        </div>
+
+
+        {{#unless isConfirm}}
+        <div>
+            {{> button text="Get mail request"}}
+            <br>
+            <strong style="color: red">Вам потрібно підтвердити ваш e-mail!</strong>
+        </div>
+        {{/unless}}
+
+        {{#if balance includeZero=true}}
+            <div><strong>Ваш баланс: {{balance}}</strong></div>
+        {{/if}}
+
+    {{/with}}
+
+</div>
